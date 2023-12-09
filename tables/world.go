@@ -1,8 +1,8 @@
 package tables
 
 type World struct {
-	ID          ID
-	Name        string
-	NationCount uint64
-	Nations     []ID
+	ID          ID     `json:"id"`
+	Name        string `json:"name"`
+	NationCount uint64 `json:"nation_count"`
+	Nations     []ID   `json:"nations"`
 }
