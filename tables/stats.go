@@ -8,7 +8,7 @@ type NeutralResource struct {
     Percentage StatsPercentage
 }
 
-type Exports struct {
+type Export struct {
     Name string
     Percentage StatsPercentage
 }
@@ -17,7 +17,7 @@ type Stats struct {
     Population StatsNumber
     NeutralResources []NeutralResource
     GDP StatsNumber
-    Exports []Exports
+    Exports []Export
 
     Power StatsNumber
     Army StatsNumber
