@@ -1,8 +1,8 @@
 package tables
 
 type World struct {
+	ID          ID
 	Name        string
-	ID          string
 	NationCount uint64
-	Nations     []Nation
+	Nations     []ID
 }
