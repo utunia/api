@@ -1,8 +1,12 @@
 package routes
 
-import "github.com/gofiber/fiber/v2"
+import (
+	"github.com/utunia/api/tables"
+
+	"github.com/gofiber/fiber/v2"
+)
 
 
-func SetupRoutes(app *fiber.App) {
-
+func SetupRoutes(store *tables.SupabaseStore,app *fiber.App) {
+    SetupNationsRoute(store, app)
 }

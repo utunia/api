@@ -1,15 +1,23 @@
 package main
 
 import (
-	"utunia_api/routes"
+	"os"
+
+	"github.com/utunia/api/routes"
+	"github.com/utunia/api/tables"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/joho/godotenv"
 )
 
 func main() {
-    app := fiber.New()
+	godotenv.Load()
 
-    routes.SetupRoutes(app)
+	app := fiber.New()
 
-    panic(app.Listen(":8080"))
+	store := tables.NewSupabaseStore(os.Getenv("SUPABASE_URL"), os.Getenv("SUPABASE_KEY"))
+
+	routes.SetupRoutes(store, app)
+
+	panic(app.Listen(":8080"))
 }
