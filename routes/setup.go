@@ -6,7 +6,7 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
-
-func SetupRoutes(store *tables.SupabaseStore,app *fiber.App) {
-    SetupNationsRoute(store, app)
+func SetupRoutes(store *tables.SupabaseStore, app *fiber.App) {
+	SetupNationsRoute(store, app)
+	SetupWorldsRoute(store, app)
 }

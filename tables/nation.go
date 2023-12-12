@@ -47,7 +47,7 @@ type Stats struct {
 	Sprituality   StatsPercentage `json:"sprituality"`
 	Education     StatsPercentage `json:"education"`
 	SecularRate   StatsPercentage `json:"secular_rate"`
-	DeathRate   StatsPercentage `json:"death_rate"`
+	DeathRate     StatsPercentage `json:"death_rate"`
 }
 
 func (store SupabaseStore) GetNationByName(nation *Nation, name string) error {
