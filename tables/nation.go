@@ -10,6 +10,7 @@ type Nation struct {
 	Classification string `json:"classification"`
 	Ideology       string `json:"ideology"`
 	Stats          Stats  `json:"stats"`
+	Regions	       []int8  `json:"regions"`
 }
 
 type StatsNumber int32
