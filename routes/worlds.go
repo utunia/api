@@ -12,7 +12,7 @@ func SetupWorldsRoute(store *tables.SupabaseStore, app *fiber.App) {
 		var world tables.World
 
 		if err := store.GetWorldById(&world, id); err != nil {
-			return ctx.Status(400).SendString(err.Error())
+			return ctx.Status(fiber.StatusBadRequest).SendString(err.Error())
 		}
 
 		return ctx.JSON(world)

@@ -9,4 +9,5 @@ import (
 func SetupRoutes(store *tables.SupabaseStore, app *fiber.App) {
 	SetupNationsRoute(store, app)
 	SetupWorldsRoute(store, app)
+    SetupAuthRoute(store, app)
 }
